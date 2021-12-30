@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 
 import Home from './components/Home';
-import InitialForm from './components/InitialForm';
+import About from './components/About';
 
 const App = () => {
     return (
@@ -11,8 +11,8 @@ const App = () => {
             <Navigation />
 
             <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/initial-form" element={<InitialForm />} />
+                <Route path="/*" element={<Home />} />
+                <Route path="about" element={<About />} />
             </Routes>
 
         </div>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Register = () => {
+const Register = ({ setChooseForm }) => {
     return (
         <div className='container-fluid' id="register-form">
-            <form>
+            <form className='register-form form'>
                 <div className="input-set">
                     <label htmlFor="username">Username</label>
                     <input type="text" id='username' placeholder='username' />
@@ -19,8 +19,10 @@ const Register = () => {
                     <input type="text" id='password2' />
                 </div>
 
-                <button className='btn bttn-custom'>Register</button>
+                <button className='btn bttn-custom bttn-register'>Register</button>
             </form>
+
+            <p>You have an account? Please <span onClick={() => setChooseForm('login')}>Login</span> here</p>
         </div>
     )
 }

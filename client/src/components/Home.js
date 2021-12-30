@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
-
 import './Home.scss';
+
+import { Routes, Route } from 'react-router-dom';
+import InitialForm from './InitialForm';
 
 const Home = () => {
     return (
@@ -14,6 +15,10 @@ const Home = () => {
             <div className="home-title">
                 <h1 data-title="WELCOME">WELCOME</h1>
             </div>
+
+            <Routes>
+                <Route path="initial-form" element={<InitialForm />} />
+            </Routes>
         </div>
     )
 }

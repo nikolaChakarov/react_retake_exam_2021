@@ -38,10 +38,11 @@ const NavDesktop = () => {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="about">About</Link>
                 </li>
+
                 <li>
-                    <Link to="/initial-form">Login/Register</Link>
+                    <Link to="initial-form">Login/Register</Link>
                 </li>
 
             </ul>
@@ -80,6 +81,7 @@ const NavMobile = () => {
                     <li>
                         <Link to="/about">About</Link>
                     </li>
+
                     <li className='last-link'>
                         <Link to="/initial-form">Login/Register</Link>
                     </li>
