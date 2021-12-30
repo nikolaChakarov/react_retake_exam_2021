@@ -9,10 +9,10 @@ const userShema = new mongoose.Schema({
         required: true,
         type: String
     },
-    products: [
+    arts: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'product'
+            ref: 'art'
         }
     ]
 });

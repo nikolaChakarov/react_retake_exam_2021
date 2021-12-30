@@ -24,7 +24,13 @@ const artSchema = new mongoose.Schema({
     likes: {
         type: Number,
         default: 0
-    }
+    },
+    comments: [
+        {
+            author: String,
+            comments: []
+        }
+    ]
 });
 
 const Art = mongoose.model('art', artSchema);

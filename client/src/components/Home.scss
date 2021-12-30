@@ -1,0 +1,52 @@
+#home-app {
+    position: relative;
+    // background-color: lightblue;
+    flex-grow: 1;
+    
+    .back-image {
+        position: absolute;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    .home-title {
+        // position: absolute;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        h1 {
+            color: rgba($color: #2B3240, $alpha: .8);
+            position: relative;
+
+           
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    #home-app {
+        .home-title {
+            h1 {
+                font-size: 3rem;
+                font-weight: 900;
+                color: rgba($color: #2B3240, $alpha: .8);
+                position: relative;
+    
+                &::after {
+                    content: attr(data-title);
+                    position: absolute;
+                    color: rgba($color: #F2DE77, $alpha: 1);
+                    left: -1rem;
+                    top: -1rem;
+                }
+            }
+        }
+      
+    }
+}
