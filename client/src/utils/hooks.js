@@ -30,3 +30,9 @@ export function useWindowSize() {
 
     return windowSize;
 }
+
+export const useForm = (e, currentState) => {
+
+    const [state, setState] = useState(...currentState);
+
+}

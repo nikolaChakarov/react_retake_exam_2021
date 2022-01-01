@@ -11,22 +11,21 @@ import { useWindowSize } from '../utils/hooks';
 
 const Navigation = () => {
 
-    const { username, token } = useContext(GlobalContext);
+    const { appData } = useContext(GlobalContext);
 
     const windowSize = useWindowSize();
 
     useEffect(() => {
-        console.log(windowSize);
     }, [windowSize])
 
     return (
         <div className='container-fluid' id='nav-main-app'>
-            {windowSize.width > 576 ? <NavDesktop /> : <NavMobile />}
+            {windowSize.width > 576 ? <NavDesktop appData={appData} /> : <NavMobile />}
         </div>
     );
 }
 
-const NavDesktop = () => {
+const NavDesktop = ({ appData }) => {
 
     return (
         <div className="nav-desktop-wrapper">
@@ -41,9 +40,14 @@ const NavDesktop = () => {
                     <Link to="about">About</Link>
                 </li>
 
-                <li>
-                    <Link to="initial-form">Login/Register</Link>
-                </li>
+                {!appData.userData.token ?
+                    <li>
+                        <Link to="initial-form">Login/Register</Link>
+                    </li> :
+                    <li>
+                        <Link to="logout">Logout</Link>
+                    </li>
+                }
 
             </ul>
         </div>

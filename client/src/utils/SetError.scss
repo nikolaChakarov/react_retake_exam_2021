@@ -1,0 +1,17 @@
+.error-wrapper  {
+    position: relative;
+    .error-el {
+        background-color: #850000;
+        // position: absolute;
+        padding: 0.3rem;
+        align-items: center;
+        color: #fff;
+        width: 100%;
+    
+        .close-icon {
+            margin-right: 0.5rem;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

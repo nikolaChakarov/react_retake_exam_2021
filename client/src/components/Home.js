@@ -4,7 +4,13 @@ import './Home.scss';
 import { Routes, Route } from 'react-router-dom';
 import InitialForm from './InitialForm';
 
+import { useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
+
 const Home = () => {
+    const { appData } = useContext(GlobalContext);
+    console.log(appData);
+
     return (
         <div className='container-fluid' id='home-app'>
 

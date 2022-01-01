@@ -6,9 +6,9 @@ import { GlobalProvider } from './context/GlobalState';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <GlobalProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <GlobalProvider>
       <App />
-    </BrowserRouter>
-  </GlobalProvider>, document.getElementById('root')
+    </GlobalProvider>
+  </BrowserRouter>, document.getElementById('root')
 );

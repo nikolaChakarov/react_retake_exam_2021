@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const { body, validationResult } = require('express-validator');
 
-router.get('/login', async (req, res, next) => {
+router.post('/login', async (req, res, next) => {
 
     try {
 

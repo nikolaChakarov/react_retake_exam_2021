@@ -4,6 +4,7 @@ import './App.scss';
 
 import Home from './components/Home';
 import About from './components/About';
+import Logout from './components/Logout';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
             <Routes>
                 <Route path="/*" element={<Home />} />
                 <Route path="about" element={<About />} />
+                <Route path="logout" element={<Logout />} />
             </Routes>
 
         </div>
